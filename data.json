@@ -1,11 +1,9 @@
 {
     "header": {
       "title": "Pixel Palace",
-      "subtitle": "Welcome to the Kingdom of Cutting-Edge Computing!",
-      "image": "../Images/Home/img1.jpeg"
+      "subtitle": "Welcome to the Kingdom of Cutting-Edge Computing!"
     },
     "footer": {
       "text": "&copy; Pixel Palace; all rights reserved"
     }
-  }
-  
+}
