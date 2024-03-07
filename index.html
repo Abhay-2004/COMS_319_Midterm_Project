@@ -178,6 +178,16 @@
     </div>
 
 <body>
+  <script>
+    fetch('./data.json')
+        .then(response => response.json())
+        .then(data => {
+            document.querySelector('.mbr-section-title').innerHTML = `<strong>${data.header.title}</strong>`;
+            document.querySelector('.mbr-text').innerHTML = `<strong>${data.header.subtitle}</strong>`;
+            document.querySelector('#footerText').innerHTML = data.footer.text;
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+</script>
 
   <style>
     .cid-u3EbN5RTG5 {
@@ -282,9 +292,9 @@
       <div class="row">
         <div class="content-wrap col-12 col-md-10">
           <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1" style="text-shadow: 2px 2px 2px black;">
-            <strong>Pixel Palace</strong>
+            
           </h1>
-          <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7" style="text-shadow: 2px 2px 2px black;"><strong>Welcome to the Kingdom of Cutting-Edge Computing!<strong></p>
+          <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7" style="text-shadow: 2px 2px 2px black;"></p>
         </div>
       </div>
     </div>
@@ -294,7 +304,7 @@
 </body>
 <footer class="footer">
   <div class="container">
-    <p>&copy; Pixel Palace; all rights reserved</p>
+    
   </div>
 </footer>
 
