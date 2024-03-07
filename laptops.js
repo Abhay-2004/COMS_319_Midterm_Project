@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const laptopsContainer = document.querySelector('.row.row-cols-1.row-cols-md-3.g-4');
         laptopsContainer.innerHTML = '';
         data.forEach(laptop => {
-            // Updated detail page URL to reflect the new path
-            const detailPageUrl = `./laptop_details/${laptop.title.replace(/\s+/g, '_')}.html`;
             laptopsContainer.innerHTML += `
             <div class="col">
                 <div class="card h-100">
@@ -14,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <div class="card-body">
                         <h5 class="card-title">${laptop.title}</h5>
                         <p class="card-text">${laptop.description}</p>
-                        <a href="${detailPageUrl}" class="btn btn-primary">View Details</a> <!-- Updated Detail page button -->
+                        <a href="${laptop.detailsPage}" class="btn btn-primary">View Details</a>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">${laptop.price}</small>
