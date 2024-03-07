@@ -126,6 +126,16 @@
     
   </head>
   <body>
+    <script>
+      fetch('./data.json')
+          .then(response => response.json())
+          .then(data => {
+              document.querySelector('.mbr-section-title').innerHTML = `<strong>${data.header.title}</strong>`;
+              document.querySelector('.mbr-text').innerHTML = `<strong>${data.header.subtitle}</strong>`;
+              document.querySelector('#footerText').innerHTML = data.footer.text;
+          })
+          .catch(error => console.error('Error fetching JSON:', error));
+  </script>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
@@ -178,16 +188,7 @@
     </div>
 
 <body>
-  <script>
-    fetch('./data.json')
-        .then(response => response.json())
-        .then(data => {
-            document.querySelector('.mbr-section-title').innerHTML = `<strong>${data.header.title}</strong>`;
-            document.querySelector('.mbr-text').innerHTML = `<strong>${data.header.subtitle}</strong>`;
-            document.querySelector('#footerText').innerHTML = data.footer.text;
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-</script>
+  
 
   <style>
     .cid-u3EbN5RTG5 {
@@ -303,8 +304,8 @@
 
 </body>
 <footer class="footer">
-  <div class="container">
-    
+  <div class="container" id="footerText">
+
   </div>
 </footer>
 
