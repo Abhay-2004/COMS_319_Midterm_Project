@@ -29,3 +29,10 @@ body {
     margin-right: 10px;
     border-radius: 50%;
 }
+.carousel-inner img {
+    transition: transform 0.5s ease;
+}
+
+.carousel-inner img:hover {
+    transform: scale(1.05);
+}

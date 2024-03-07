@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <div class="card-body">
                         <h5 class="card-title">${phone.name}</h5>
                         <p class="card-text">${phone.description}</p>
-                        <a href="./iphone15.html" class="btn btn-primary">View Details</a> <!-- Button to product details page -->
+                        <a href="${phone.url}" class="btn btn-primary">View Details</a> <!-- Button to product details page -->
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">${phone.price}</small>

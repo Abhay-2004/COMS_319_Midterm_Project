@@ -26,11 +26,27 @@
             flex-wrap: wrap; /* Allow items to wrap */
         }
 
+        .image-container {
+            flex: 1 1 100%; /* Take up full width, allow wrapping */
+            margin-right: 10px;
+            position: relative; /* Position relative for absolute positioning */
+        }
+
         .container img {
             max-width: 100%;
             max-height: 100%;
-            flex: 1 1 100%; /* Take up full width, allow wrapping */
-            margin-bottom: 20px; /* Add space between image and text */
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%; /* Position at the vertical center */
+            right: -70px; /* Adjust right position */
+            transform: translateY(-50%); /* Center vertically */
+            width: 70px;
+            height: 70px;
+            background: url('Images/Phones/arrow.png') no-repeat center center;
+            background-size: contain;
+            cursor: pointer;
         }
 
         .text {
@@ -51,21 +67,15 @@
             text-align: center;
             margin-bottom: 10px;
         }
-
-        .arrow {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            background: url('arrow.png') no-repeat center center;
-            background-size: contain;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 class="heading">iPhone 15</h1> <!-- Heading on top -->
-        <img id="mainImage" src="./Images/Phones/iPhone15.jpg" alt="iPhone 15">
+        <div class="image-container">
+            <img id="mainImage" src="./Images/Phones/iPhone15.jpg" alt="iPhone 15">
+            <div class="arrow" onclick="changeImage()"></div> <!-- Arrow next to the image -->
+        </div>
         <div class="text">
             <p>
                 Next-generation A-series processor for enhanced performance and efficiency, improved camera system for better low-light performance, and 5G connectivity enhancements.
@@ -73,11 +83,10 @@
             <p>Starting at $2399</p>
             <a href="./phones.html">Back to Phones Collection</a>
         </div>
-        <div class="arrow" onclick="changeImage()"></div>
     </div>
 
     <script>
-        var images = ['./Images/Phones/iPhone15.jpg', './Images/Phones/another_image.jpg'];
+        var images = ['./Images/Phones/iPhone15.jpg', 'Images/Phones/iphone15a.jpeg'];
         var currentImageIndex = 0;
 
         function changeImage() {
