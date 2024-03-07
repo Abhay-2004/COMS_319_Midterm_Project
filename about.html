@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>About Us - Pixel Palace</title>
+    <style>
+      
+      .footer{
+        background-color: rgba(61, 60, 60, 1);
+        text-align: center; /* Align content horizontally to center */
+        display: flex; /* Use flexbox */
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        height: 50px;
+        color: white;
+        margin-top: auto;
+      }
+        body {
+
+            padding-top: 5rem;
+        }
+        .profile-image {
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .profile {
+            margin-bottom: 20px;
+        }
+        .about-section {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .navbar-brand img {
+            height: 30px; 
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/826db7d4-041d-4d4b-b504-396f2cc84c7a/d4hr3a5-bc1bf84b-df9b-4492-ba25-528c37266101.png/v1/fit/w_385,h_384,q_70,strp/pixel_art_icons___my_asus_laptop_by_siberias_d4hr3a5-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Mzg0IiwicGF0aCI6IlwvZlwvODI2ZGI3ZDQtMDQxZC00ZDRiLWI1MDQtMzk2ZjJjYzg0YzdhXC9kNGhyM2E1LWJjMWJmODRiLWRmOWItNDQ5Mi1iYTI1LTUyOGMzNzI2NjEwMS5wbmciLCJ3aWR0aCI6Ijw9Mzg1In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.ekOOyi0YdVqqzk-nprU-o1I6ZNInwLUHg5bFef6wxD0" alt="Logo">
+            Pixel Palace
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./phones.html">Phones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./laptops.html">Laptops</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./about.html">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+    <div class="about-section text-center">
+        <h1>About Us</h1>
+        <p>Welcome to Pixel Palace, your one-stop shop for the latest in laptops and smartphones. Our team is dedicated to providing you with top-notch products and excellent customer service.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center profile">
+            <img class="profile-image" src="./Images/Profile_Pics/abhay.jpg" alt="Abhay">
+            <h3>Abhay</h3>
+            <p>Email: abhay14@iastate.edu</p>
+        </div>
+        <div class="col-md-4 text-center profile">
+            <img class="profile-image" src="./Images/Profile_Pics/prerak.jpeg" alt="Prerak" style="object-fit: cover;">
+            <h3>Prerak</h3>
+            <p>Email: prerak@iastate.edu</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="about-section">
+                <h2>Our Project</h2>
+                <p>As part of the Advanced Web Development course, we've created this platform to showcase our skills and contribute to the tech community. We're excited to share our journey with you.</p>
+                <p><strong>Course:</strong> COMS 319 - CONSTRUCTION OF USER INTERFACES<br>
+                   <strong>Professor:</strong> Professor Abraham Aldaco<br>
+                  <strong>Date:</strong> Feb 7 2024</p>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+<footer class="footer">
+  <div class="container">
+    <p>&copy; Pixel Palace; all rights reserved</p>
+  </div>
+</footer>
+</html>
