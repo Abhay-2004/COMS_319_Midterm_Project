@@ -51,12 +51,21 @@
             text-align: center;
             margin-bottom: 10px;
         }
+
+        .arrow {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url('arrow.png') no-repeat center center;
+            background-size: contain;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 class="heading">iPhone 15</h1> <!-- Heading on top -->
-        <img src="./Images/Phones/iPhone15.jpg" alt="iPhone 15">
+        <img id="mainImage" src="./Images/Phones/iPhone15.jpg" alt="iPhone 15">
         <div class="text">
             <p>
                 Next-generation A-series processor for enhanced performance and efficiency, improved camera system for better low-light performance, and 5G connectivity enhancements.
@@ -64,6 +73,17 @@
             <p>Starting at $2399</p>
             <a href="./phones.html">Back to Phones Collection</a>
         </div>
+        <div class="arrow" onclick="changeImage()"></div>
     </div>
+
+    <script>
+        var images = ['./Images/Phones/iPhone15.jpg', './Images/Phones/another_image.jpg'];
+        var currentImageIndex = 0;
+
+        function changeImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            document.getElementById('mainImage').src = images[currentImageIndex];
+        }
+    </script>
 </body>
 </html>
